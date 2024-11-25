@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #fff;
+  --text-white: #242424;
+  --border-color: #eee;
+}
+
+body {
+  font-family: "Inter", "SF Pro Display", "Open Sans", "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  border: 2px solid #242424;
+  border-radius: 7px;
+  width: 1.2rem;
+  height: 1.2rem;
+
+  &:checked {
+    border: none;
+    background: #1d4ed8;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      transition: 5s ease;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    ~label {
+      color: #1d4ed8;
+    }
+  }
+}
+
+label {
+  @apply select-none text-sm font-medium;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px 0px;
+}
