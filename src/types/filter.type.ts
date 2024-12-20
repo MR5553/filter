@@ -1,8 +1,7 @@
-export interface filter_type {
-    minPrice: number;
-    maxPrice: number;
+export interface FilterType {
+    price: [min: number, max: number];
     Brands: string[];
     rams: string[];
     colors: string[];
-    Storages: string[]
+    Storages: string[];
 }

@@ -14,16 +14,17 @@ interface CardProps {
 
 export default function Card({ name, price, brand, image }: CardProps) {
     return (
-        <div className="flex flex-col bg-slate-200"
+        <div className="flex flex-col bg-white p-2 rounded"
         >
             <Image
                 src={image.imageUrl}
+                alt={name}
                 width={200}
                 height={200}
-                alt={name}
-                priority={false}
+                priority={true}
+                style={{ width: "100%", height: "100%" }}
             />
-            <h2 className="text-base font-medium">{name}</h2>
+            <h2 className="text-base font-medium truncate">{name}</h2>
             <span>{currecy_formater.format(price)}</span>
         </div>
     )
